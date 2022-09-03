@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('channel_id');
-            $table->string('comments' , 5000)->comment('投稿の内容');
+            $table->string('comment' , 5000)->comment('投稿の内容');
             $table->timestamps();
         });
     }
