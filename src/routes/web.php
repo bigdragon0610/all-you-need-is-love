@@ -16,7 +16,12 @@ use App\Http\Controllers\ChannelController;
 
 //ログイン済み
 Route::middleware(['auth'])->group(function () {
-    Route::resource('/channel', ChannelController::class);
+    Route::resource('/channel', ChannelController::class, [
+        'names' => [
+            'index' => 'channel',
+            'show' => 'channel.show'
+        ]
+    ]);
 });
 
 require __DIR__ . '/auth.php';

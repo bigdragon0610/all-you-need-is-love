@@ -2,7 +2,7 @@
 
 @section('index')
       @foreach ($channels as $channel)
-            <p>{{ $channel -> name }}</p>
+            <a href="{{ route('channel.show', $channel -> id ) }}">{{ $channel -> name }}</a><br>
       @endforeach
 @endsection
 
