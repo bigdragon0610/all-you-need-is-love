@@ -27,6 +27,7 @@
             <!-- Page Content -->
             <main>
                 {{-- {{ $slot }} --}}
+                @yield('index')
             </main>
         </div>
     </body>
