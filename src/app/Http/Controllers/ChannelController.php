@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Post;
+
 
 class ChannelController extends Controller
 {
@@ -46,7 +49,8 @@ class ChannelController extends Controller
      */
     public function show($id)
     {
-        //
+        $posts = Post::with('user')->get();
+        return view('post.index', ["posts"=>$posts]);
     }
 
     /**
