@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Channel;
 use Illuminate\Http\Request;
 
 class ChannelController extends Controller
@@ -13,8 +14,8 @@ class ChannelController extends Controller
      */
     public function index()
     {
-        $test = 'hello world';
-        return view('index', compact('test'));
+        $channels = Channel::all();
+        return view('index', compact('channels'));
     }
 
     /**

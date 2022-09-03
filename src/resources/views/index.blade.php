@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('index')
-      <p>{{$test}}</p>
+      @foreach ($channels as $channel)
+            <p>{{ $channel -> name }}</p>
+      @endforeach
 @endsection
 
