@@ -11,11 +11,11 @@ class Post extends Model
 
     public function user()
     {
-        return $this->belongsTo('App\User');
+        return $this->belongsTo('App\Models\User');
     }
 
     public function channel()
     {
-        return $this->belongsTo('App\Channel');
+        return $this->belongsTo('App\Models\Channel');
     }
 }
