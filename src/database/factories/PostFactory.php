@@ -21,7 +21,7 @@ class PostFactory extends Factory
         return [
             'user_id' => fake()->numberBetween(10, 100),
             'channel_id' => fake()->numberBetween(10, 100),
-            'comments' => fake()->paragraph(),
+            'comment' => fake()->paragraph(),
         ];
     }
 }
