@@ -11,6 +11,8 @@ class Post extends Model
 {
   use HasFactory, Notifiable;
 
+  protected $fillable = ['user_id','channel_id','comment'];
+
   public function user()
   {
     return $this->belongsTo('App\Models\User');

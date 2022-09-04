@@ -23,4 +23,12 @@
             </div>
         @endforeach
     </section>
+    <footer>
+        <form action="{{ route('post.store') }}" method="POST">
+            @csrf
+            <input type="hidden" name="channel_id" value="{{$channel_id}}">
+            <textarea class="resize-none" rows="5" name="comment"></textarea>
+            <input type="submit" value="送信">
+        </form>
+    </footer>
 @endsection
