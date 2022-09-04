@@ -27,12 +27,8 @@
         <form action="{{ route('post.store') }}" method="POST">
             @csrf
             <input type="hidden" name="channel_id" value="{{$channel_id}}">
-            <input type="text" name="comment" value="">
-            {{-- <textarea name="" id="" cols="30" rows="10"></textarea> --}}
+            <textarea class="form-control resize-none" rows="5" name="comment"></textarea>
             <input type="submit" value="送信">
-            {{-- <button type="submit" class="ml-auto block mt-3">
-                投稿
-            </button> --}}
         </form>
     </footer>
 @endsection
