@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChannelController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,12 +17,14 @@ use App\Http\Controllers\ChannelController;
 
 //ログイン済み
 Route::middleware(['auth'])->group(function () {
-    Route::resource('/channel', ChannelController::class, [
-        'names' => [
-            'index' => 'channel',
-            'show' => 'channel.show'
-        ]
-    ]);
+  Route::resource('/channel', ChannelController::class, [
+    'names' => [
+      'index' => 'channel',
+      'show' => 'channel.show'
+    ]
+  ]);
+
+  Route::resource('/post', PostController::class);
 });
 
 require __DIR__ . '/auth.php';
