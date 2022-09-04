@@ -51,7 +51,7 @@ class ChannelController extends Controller
     public function show($id)
     {
         $posts = Post::with('user')->where("channel_id" , $id)->get();
-        return view('post.index', ["posts"=>$posts]);
+        return view('post.index', ["posts"=>$posts,"channel_id"=>$id]);
     }
 
     /**
