@@ -10,16 +10,18 @@ class Sidebar extends Component
 {
   public $user;
   public $channels;
+  public $channelId;
 
   /**
    * Create a new component instance.
    *
    * @return void
    */
-  public function __construct()
+  public function __construct($channelId = 0)
   {
     $this->user = Auth::user()->name;
     $this->channels = Channel::all();
+    $this->channelId = $channelId;
   }
 
   /**

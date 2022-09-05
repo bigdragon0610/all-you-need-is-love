@@ -8,28 +8,23 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Fonts -->
     <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
 
-    <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body class="font-sans antialiased">
     <div class="min-h-screen bg-gray-100 h-screen overflow-scroll">
-        {{-- @include('layouts.navigation') --}}
 
-        <!-- Page Heading -->
         <header class="bg-white shadow-sm w-screen h-20 absolute">
-            {{-- {{ $header }} --}}
         </header>
 
-        <!-- Page Content -->
-        <main class="flex mt-20">
-            <x-sidebar />
-            {{-- {{ $slot }} --}}
-            @yield('index')
-        </main>
+        <section class="mt-20 flex">
+            @yield('sidebar')
+            <main>
+                @yield('index')
+            </main>
+        </section>
     </div>
 </body>
 
